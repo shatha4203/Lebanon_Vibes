@@ -1,0 +1,246 @@
+/* =========================
+   GLOBAL STYLES
+   ========================= */
+
+:root {
+    --cedar-green: #2e7d32;
+    --light-green: #e8f5e9;
+    --lebanon-red: #e74c3c;
+    --bg-tint: #f1f8e9;
+    --white: #ffffff;
+    --dark: #333;
+    --text-gray: #666;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-tint);
+    color: var(--dark);
+}
+
+/* =========================
+   GLOBAL NAVBAR
+   ========================= */
+
+.navbar {
+    background: var(--white);
+    padding: 14px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--cedar-green);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--dark);
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+    background: var(--light-green);
+    color: var(--cedar-green);
+}
+
+.nav-links a.active {
+    background: var(--cedar-green);
+    color: var(--white);
+}
+
+/* =========================================
+   PROFILE PAGE LAYOUT
+   ========================================= */
+
+.profile-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* SIDEBAR CARD */
+.profile-sidebar {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    background: var(--cedar-green);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.sidebar-menu {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: var(--dark);
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.sidebar-menu a:hover {
+    background: var(--light-green);
+    color: var(--cedar-green);
+}
+
+.sidebar-menu a.active {
+    background: var(--cedar-green);
+    color: var(--white);
+}
+
+.sidebar-menu .logout-btn {
+    color: var(--lebanon-red);
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+/* MAIN CONTENT AREA */
+.profile-content {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.profile-header h2 {
+    color: var(--cedar-green);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--light-green);
+    padding-bottom: 10px;
+}
+
+/* DETAILS BOXES */
+.details-vertical {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.detail-row {
+    background: #f9fdfa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.detail-row label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    margin-bottom: 5px;
+}
+
+.detail-row p {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* REVIEWS */
+.review-item {
+    border-left: 4px solid var(--cedar-green);
+    padding: 15px;
+    background: #fcfcfc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   AUTH & LOGIN (PRESERVED)
+   ========================================= */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 20px;
+}
+
+.auth-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--cedar-green);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 850px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .navbar {
+        padding: 12px 20px;
+    }
+}

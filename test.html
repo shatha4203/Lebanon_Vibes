@@ -1,0 +1,9 @@
+<script>
+fetch("ai_assistant.php", {
+  method: "POST",
+  headers: {"Content-Type":"application/json"},
+  body: JSON.stringify({message:"hello"})
+})
+.then(r => r.text())
+.then(t => alert(t));
+</script>

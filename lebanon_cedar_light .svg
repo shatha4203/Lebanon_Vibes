@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" aria-labelledby="title">
+<title>Lebanon cedar - light UI</title>
+<rect width="24" height="24" rx="4" fill="#fff"/>
+<circle cx="12" cy="12" r="9" fill="#f1f5f9"/>
+<g id="cedar" transform="translate(0,0)">
+  <path d="M12 6.6l-2 2h4l-2-2z" fill="#007A3D"/>
+  <path d="M9.2 8.9l-1.8 1.8h9.2l-1.8-1.8H9.2z" fill="#007A3D"/>
+  <path d="M8 11.4l-1.2 1.2h10.4L16 11.4H8z" fill="#007A3D"/>
+  <rect x="11" y="13.5" width="2" height="2.2" rx="0.2" fill="#5A3F2B"/>
+</g>
+<circle cx="12" cy="12" r="11" fill="none" stroke="#ccd5db" stroke-width="0.7"/>
+</svg>

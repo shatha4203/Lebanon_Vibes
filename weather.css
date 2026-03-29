@@ -1,0 +1,14 @@
+#weather-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.rain { background: url("/img/rain.gif") repeat; opacity: .2; }
+.clouds { background: url("/img/clouds.png") repeat-x; animation: move 60s linear infinite; }
+
+@keyframes move {
+  from { background-position-x: 0; }
+  to { background-position-x: 10000px; }
+}

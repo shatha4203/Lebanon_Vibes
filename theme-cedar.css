@@ -1,0 +1,61 @@
+
+:root{
+  --cedar:#2E5E4E;--beige:#C2A878;--sand:#F8F5E9;--olive-text:#1C1C1C;--card-bg:rgba(255,255,255,0.95);
+}
+body{background:var(--sand);color:var(--olive-text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial;}
+.navbar-cedar{background:linear-gradient(90deg,rgba(46,94,78,.98),rgba(44,86,72,.95));box-shadow:0 6px 18px rgba(42,82,68,.12);}
+.navbar-cedar .navbar-brand{color:#fff;font-weight:700;}
+.navbar-cedar .nav-link{color:rgba(255,255,255,.95);} .navbar-cedar .nav-link:hover{color:var(--beige);}
+.card-cedar{background:var(--card-bg);border:1px solid rgba(30,60,50,.06);border-radius:14px;box-shadow:0 8px 30px rgba(37,72,61,.06);}
+.btn-cedar{background:var(--cedar);color:#fff;border:1px solid rgba(255,255,255,.06);}
+.btn-cedar-outline{border:2px solid var(--cedar);color:var(--cedar);background:transparent;}
+.hero-cedar{background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(242,239,230,.9));border-radius:18px;padding:48px;}
+.badge-cedar{background:var(--cedar);color:#fff;}
+body.sunny{--accent:#ffde9e;}
+body.rainy{--accent:#cde6f7;background:linear-gradient(180deg,#e8f0f6,#dfeaf3);}
+body.rainy{--accent:#a8cce3;background:linear-gradient(180deg,#d4e4ef,#c8dfee);}
+body.snow{--accent:#f7fbff;background:linear-gradient(180deg,#fbfcff,#eef4fa);}
+@media(max-width:768px){.hero-cedar{padding:28px;}}
+/* Night mode */
+body.night {
+  background: linear-gradient(180deg, #0B1D2C, #0F2E44);
+  color: #d7eaff;
+}
+
+body.night .card-cedar {
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(6px);
+  border-color: rgba(255,255,255,0.12);
+}
+
+/* Animated particles */
+.weather-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* raindrops */
+body.rainy .weather-particles::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url('https://i.imgur.com/U8aQGqv.png');
+  opacity:0.2;
+  animation: rainMove 6s linear infinite;
+}
+
+/* snowflakes */
+body.snow .weather-particles::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url('https://i.imgur.com/BGdZJOM.png');
+  opacity:0.3;
+  animation: snowMove 12s linear infinite;
+}
+
+/* Animations */
+@keyframes rainMove { 0%{transform:translateY(-20%);} 100%{transform:translateY(100%);} }
+@keyframes snowMove { 0%{transform:translateY(-10%);} 100%{transform:translateY(60%);} }

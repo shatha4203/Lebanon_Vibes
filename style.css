@@ -1,0 +1,66 @@
+ /* theme-cedar.css - Cedar / beige theme for Lebanon Vibes */
+:root{
+  --cedar: #2E5E4E;
+  --beige: #C2A878;
+  --sand: #F8F5E9;
+  --olive-text: #1C1C1C;
+  --card-bg: rgba(255,255,255,0.95);
+}
+
+/* Bootstrap overrides */
+body {
+  background: var(--sand);
+  color: var(--olive-text);
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Header */
+.navbar-cedar {
+  background: linear-gradient(90deg, rgba(46,94,78,0.98), rgba(44,86,72,0.95));
+  box-shadow: 0 6px 18px rgba(42,82,68,0.12);
+}
+.navbar-cedar .navbar-brand { color: #fff; font-weight:700; }
+.navbar-cedar .nav-link { color: rgba(255,255,255,0.95); }
+.navbar-cedar .nav-link:hover { color: var(--beige); }
+
+/* Card */
+.card-cedar {
+  background: var(--card-bg);
+  border: 1px solid rgba(30,60,50,0.06);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(37,72,61,0.06);
+}
+
+/* Buttons */
+.btn-cedar {
+  background: var(--cedar);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.btn-cedar-outline {
+  border: 2px solid var(--cedar);
+  color: var(--cedar);
+  background: transparent;
+}
+
+/* Hero */
+.hero-cedar {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,239,230,0.9));
+  border-radius: 18px;
+  padding: 48px;
+}
+
+/* Small badges */
+.badge-cedar { background: var(--cedar); color: #fff; }
+
+/* Weather-dependent classes (applied to body by JS) */
+body.sunny { --accent: #ffde9e; }
+body.rainy { --accent: #cde6f7; background: linear-gradient(180deg,#e8f0f6,#dfeaf3); }
+body.cloudy { --accent: #e7e7e3; background: linear-gradient(180deg,#f2efe8,#e9e6de); }
+body.snow { --accent: #f7fbff; background: linear-gradient(180deg,#fbfcff,#eef4fa); }
+
+/* Responsive small tweaks */
+@media (max-width: 768px){
+  .hero-cedar { padding: 28px; }
+}
